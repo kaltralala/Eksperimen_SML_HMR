@@ -40,6 +40,10 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          
+      # LANGKAH DEBUGGING 1: Lihat isi header file CSV
+      - name: Inspect Raw CSV File Header
+        run: head -n 2 creditcard.csv
       
       # Langkah 4: Jalankan Skrip Preprocessing
       # Ini adalah langkah inti. Kita menjalankan perintah yang sama persis
