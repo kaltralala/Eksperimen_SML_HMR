@@ -19,6 +19,8 @@ jobs:
   run-preprocessing:
     # Menentukan jenis mesin virtual yang akan digunakan. 'ubuntu-latest' adalah pilihan standar yang baik.
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     # Mendefinisikan urutan langkah-langkah yang akan dieksekusi
     steps:
@@ -34,7 +36,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
+          python-version: '3.12.7'
 
       # Langkah 3: Install Dependencies
       # Menjalankan pip untuk menginstal semua library dari file requirements.txt.
